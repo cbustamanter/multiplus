@@ -26,7 +26,6 @@
                   <ul>
                     <li><a href="#">Nosotros</a></li>
                     <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Servicios</a></li>
                     <li><a href="#">Clientes</a></li>
                     <li><a href="#">Contacto</a></li>
                   </ul>
