@@ -14,24 +14,18 @@
         />
       </a>
     </div>
-    <div class="navbar-menu" id="navMenu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="menu-wrap">
-            <input type="checkbox" class="toggler">
-            <div class="hamburger"><div></div></div>
-            <div class="menu">
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Clientes</a></li>
-                    <li><a href="#">Contacto</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Clientes</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -49,10 +43,17 @@ export default defineComponent({
 <style scoped>
 /* MENU STYLES */
 .menu-wrap {
-  position: fixed;
+  position: absolute;
   top: 70px;
-  right: 130px;
+  right: 110px;
   z-index: 1;
+}
+
+@media screen and (max-width: 769px) {
+  .menu-wrap {
+    top: 40px;
+    right: 75px;
+  }
 }
 
 .menu-wrap .toggler {
@@ -159,7 +160,7 @@ export default defineComponent({
   background: rgba(24, 39, 51 , 0.85);
   border-radius: 50%;
   width: 200vw;
-  height: 200vw;
+  height: 250vw;
   display: flex;
   flex: none;
   align-items: center;

@@ -1,6 +1,6 @@
 <template>
   <div class="services-container columns has-text-left is-multiline is-justify-content-center">
-    <div class="column services-card first">
+    <div class="column is-3 services-card first">
       <div class="columns h-100">
         <div class="column is-flex is-flex-direction-column is-justify-content-space-between is-8">
           <div class="bold-text header">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="column services-card second">
+    <div class="column is-3 services-card second">
       <div class="columns h-100">
         <div class="column is-flex is-flex-direction-column is-justify-content-space-between is-8">
           <div class="bold-text header">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="column services-card third">
+    <div class="column is-3 services-card third">
       <div class="columns h-100">
         <div class="column is-flex is-flex-direction-column is-justify-content-space-between is-8">
           <div class="bold-text header">
@@ -49,17 +49,45 @@ export default defineComponent({
 <style lang="scss" scoped>
   .services-container {
     margin-top: -120px;
+    @include until ($tablet) {
+      margin-top: 0px;
+      padding-top: 68px;
+    }
     .services-card {
-      max-width: 389px;
-      height: 483px;
+      height: 350px;
+      @include until ($tablet) {
+        height: 200px;
+      }
+      @include from ($fullhd) {
+        max-width: 389px;
+        height: 483px;
+      }
       color: white;
       padding-left: 39px;
+      @include from ($tablet) {
+        padding-left: 20px;
+      }
       padding-top: 33px;
       .header {
-        font-size: 42px;
+        @include from ($fullhd) {
+          font-size: 42px;
+        }
+        @include from ($tablet) {
+          font-size: 23px;
+        }
+        @include until ($tablet) {
+          font-size: 20px;
+        }
+        font-size: 27px;
       }
       .msg {
         font-size: 23px;
+        @include from ($tablet) {
+          font-size: 19px;
+        }
+        @include until ($tablet) {
+          font-size: 16px;
+        }
       }
       &.first {
         background: #FD4750;
