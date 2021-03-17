@@ -1,28 +1,28 @@
 <template>
   <Navbar/>
-  <section class="hero is-link is-fullheight">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <p class="title">
-          <img alt="Vue logo" src="./assets/logo.png" />
-          <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-        </p>
-      </div>
-    </div>
-  </section>
+  <MainSection />
+  <Services />
+  <AdvertisingPanels />
+  <RecentProjects />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import MainSection from './components/MainSection.vue'
 import Navbar from './components/Navbar.vue'
+import Services from "./components/Services.vue";
 import './assets/styles/scss/global.scss'
+import AdvertisingPanels from "./components/AdvertisingPanels.vue";
+import RecentProjects from "./components/RecentProjects.vue";
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld,
-    Navbar
+    RecentProjects,
+    AdvertisingPanels,
+    MainSection,
+    Navbar,
+    Services
   }
 })
 </script>
