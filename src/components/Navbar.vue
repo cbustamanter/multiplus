@@ -86,7 +86,8 @@ export default defineComponent({
   position: relative;
   flex: none;
   width: 100%;
-  height: 2px;
+  height: 5px;
+  border-radius: 5px;
   background: #fff;
   display: flex;
   align-items: center;
@@ -102,7 +103,8 @@ export default defineComponent({
   z-index: 1;
   top: -10px;
   width: 100%;
-  height: 2px;
+  height: 5px;
+  border-radius: 5px;
   background: inherit;
 }
 

@@ -4,10 +4,16 @@
   <Services />
   <AdvertisingPanels />
   <RecentProjects />
+  <Clients />
+  <LetsTalk />
+  <Footer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Clients from "./components/Clients.vue";
+import LetsTalk from "./components/LetsTalk.vue";
+import Footer from "./components/Footer.vue";
 import MainSection from './components/MainSection.vue'
 import Navbar from './components/Navbar.vue'
 import Services from "./components/Services.vue";
@@ -22,7 +28,10 @@ export default defineComponent({
     AdvertisingPanels,
     MainSection,
     Navbar,
-    Services
+    Services,
+    Clients,
+    LetsTalk,
+    Footer
   }
 })
 </script>
