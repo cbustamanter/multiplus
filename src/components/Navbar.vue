@@ -21,10 +21,10 @@
         <div>
           <div>
             <ul>
-              <li><a href="#">Nosotros</a></li>
-              <li><a href="#">Servicios</a></li>
-              <li><a href="#">Clientes</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><router-link @click="close" to="/about">Nosotros</router-link></li>
+              <li><router-link @click="close" to="/about">Servicios</router-link></li>
+              <li><router-link @click="close" to="/about">Clientes</router-link></li>
+              <li><router-link @click="close" to="/about">Contacto</router-link></li>              
             </ul>
           </div>
         </div>
@@ -37,6 +37,11 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Navbar",
+  methods: {
+    close() {
+      (document.querySelector('.toggler') as HTMLInputElement).checked = false;
+    },
+  }
 });
 </script>
 
