@@ -10,10 +10,10 @@
           </div>
         </div>
         <div class="columns is-mobile mt-5 ml-2">
-          <div class="column custom-btn is-offset-1-tablet is-narrow">
+          <div class="column pointer custom-btn is-offset-1-tablet is-narrow" @click="openModal">
             <div class="columns is-mobile">
               <div class="column is-narrow has-text-white py-1 pl-4 pr-0">
-                <span>Ver Video</span>
+                <span >Ver Video</span>
               </div>
               <div class="column centered is-narrow py-1">
                 <img src="../assets/svg/right-arrow.svg" />
@@ -24,12 +24,42 @@
       </div>
     </div>
   </section>
+  <vue-final-modal @closed="closed" @before-open="beforeOpen"
+                   v-model="showModal"
+                   classes="modal-container"
+                   content-class="modal-content">
+    <modal-video :frame="frame" />
+  </vue-final-modal>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import ModalVideo from "./ModalVideo.vue";
+
 export default defineComponent({
   name: "MainSection",
+  components: {
+    ModalVideo
+  },
+  data() {
+    return {
+      showModal: false,
+      frame: '',
+    }
+  },
+  methods: {
+    openModal() {
+      this.showModal = true;
+    },
+    closed() {
+      this.frame = '';
+    },
+    beforeOpen() {
+      this.frame = `<iframe allow="autoplay;" allowfullscreen frameborder="0" height="315"
+          src="https://www.youtube.com/embed/yJVc3DMOqhE?autoplay=1"
+          width="560" />`;
+    },
+  }
 });
 </script>
 
@@ -64,5 +94,24 @@ export default defineComponent({
       }
     }
   }
+}
+::v-deep .modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::v-deep .modal-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  padding: 1rem;
+  /*border: 1px solid #e2e8f0;*/
+  border-radius: 0.25rem;
+  /*background: #fff;*/
+  align-items: center;
+}
+.modal__title {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 </style>

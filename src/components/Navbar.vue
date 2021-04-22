@@ -21,6 +21,7 @@
         <div>
           <div>
             <ul>
+              <li><router-link @click="close" to="/">Inicio</router-link></li>
               <li><router-link @click="close" to="/nosotros">Nosotros</router-link></li>
               <li><router-link @click="close" to="/servicios">Servicios</router-link></li>
               <li><router-link @click="close" to="/contacto">Contacto</router-link></li>
@@ -47,7 +48,7 @@ export default defineComponent({
 <style scoped>
 /* MENU STYLES */
 .menu-wrap {
-  position: absolute;
+  position: fixed;
   top: 70px;
   right: 110px;
   z-index: 1;
@@ -186,7 +187,7 @@ export default defineComponent({
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   padding: 1rem;
 }
 
@@ -195,5 +196,11 @@ export default defineComponent({
   color: inherit;
   text-decoration: none;
   transition: color 0.4s ease;
+  transition: font-size 0.1s ease-in-out;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover{
+  color: #787777;
+  font-size: 3rem;
 }
 </style>

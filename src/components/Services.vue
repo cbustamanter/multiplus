@@ -70,7 +70,7 @@ export default defineComponent({
       padding-top: 33px;
       .header {
         @include from ($fullhd) {
-          font-size: 42px;
+          font-size: 42px !important;
         }
         @include from ($tablet) {
           font-size: 23px;
@@ -90,10 +90,10 @@ export default defineComponent({
         }
       }
       &.first {
-        background: #FD4750;
+        background: url('../assets/images/service3.png');
       }
       &.second {
-        background: green;
+        background: url('../assets/images/service1.png');
       }
       &.third {
         background: url('../assets/images/service2.png');

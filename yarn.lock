@@ -7600,6 +7600,11 @@ vscode-web-custom-data@^0.3.2:
   resolved "https://registry.yarnpkg.com/vscode-web-custom-data/-/vscode-web-custom-data-0.3.3.tgz"
   integrity sha512-orMjjj1r4efP5ocODYZm3orpANakRBsxPZPDoD5UIrFOPKDFtMJQLp6PIH1rb3AYVRD1iYXMhDQoC6tZ+DrigA==
 
+vue-final-modal@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/vue-final-modal/-/vue-final-modal-3.1.0.tgz#a8a777996f198daf6760b300a1c75c8358cb5d7f"
+  integrity sha512-F1O9IXFsL8dPS8vGrjX0UzMUC7LON4We0JIJycgs3/rEAotDj7X56JfeAZAVLpug+YIIBqvB8dknwYRM7GdVqg==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"

@@ -6,7 +6,7 @@
       </h1>
     </div>
   </div>
-  <div class="projects-container is-centered columns container is-fluid is-multiline">
+  <div class="projects-container is-centered columns container pb-6 is-fluid is-multiline">
     <div class="column is-flex is-flex-direction-column is-3">
       <img src="../assets/images/cortez.png" alt="cortez">
       <div class="has-text-left">
@@ -22,16 +22,16 @@
       </div>
     </div>
     <div class="column is-flex is-flex-direction-column is-7">
-        <img src="../assets/images/donofrio-panel.png" alt="cortez">
+        <img src="../assets/images/pizza_hut.png" alt="cortez">
       <div class="has-text-left">
-        <h2 class="title bold-text">Donofrio</h2>
+        <h2 class="title bold-text">Pizza Hut</h2>
         <h3 class="subtitle md-text">Panel Publicitario</h3>
       </div>
     </div>
     <div class="column is-flex is-flex-direction-column tyt-col2 is-4">
-        <img src="../assets/images/toyota-panel.png" alt="toyota">
+        <img src="../assets/images/panel-entel.png" alt="toyota">
       <div class="has-text-left">
-        <h2 class="title bold-text">Toyota</h2>
+        <h2 class="title bold-text">Entel</h2>
         <h3 class="subtitle md-text">Panel Publicitario</h3>
       </div>
     </div>
@@ -55,6 +55,9 @@ export default defineComponent({
     }
   }
   .projects-container {
+    img {
+      height: 100%;
+    }
     @include from ($fullhd) {
       margin-left: 10px;
     }
