@@ -1,13 +1,13 @@
 <template>
-  <div class="about-content pt-6 pb-6">
+  <div class="about-content pb-6">
     <div class="about-container">
       <div class="columns pt-5">
         <div class="column">
           <p class="bold-text has-text-left">Inicio / Nosotros</p>
         </div>
       </div>
-      <div class="columns mb-0 pt-6">
-        <div class="column pb-0 pr-0">
+      <div class="columns mbot-0 padt-6">
+        <div class="column padb-0 padr-0">
           <div class="columns has-text-left is-multiline">
             <div class="column is-10 header-column">
               <h2 class="subtitle md-text">CONÓCENOS</h2>
@@ -25,16 +25,16 @@
             </div>
           </div>
         </div>
-        <div class="column pb-0 pl-0">
+        <div class="column padb-0 padl-0">
           <img src="../assets/images/about-img1.png" alt="image" />
         </div>
       </div>
       <div class="columns">
-        <div class="column pr-0 pt-2">
+        <div class="column padr-0 pt-2">
           <img src="../assets/images/about-img2.png" alt="image" />
         </div>
-        <div class="column pl-0">
-          <div class="columns pl-6 pt-4 has-text-left is-multiline">
+        <div class="column padl-0">
+          <div class="columns padl-6 padt-4 has-text-left is-multiline">
             <div class="column is-10 header-column">
               <h2 class="subtitle md-text">VALORES</h2>
             </div>
@@ -114,6 +114,41 @@ export default defineComponent({
 <style lang="scss" scoped>
 .about-content {  
   .about-container {
+    .marb-0 {
+      @include from ($tablet) {
+        padding-bottom: 0px !important;
+      }
+    }
+    .padt-6 {
+      @include from ($tablet) {
+        padding-top: 3rem !important;
+      }
+    }
+    .padb-0 {
+      @include from ($tablet) {
+        padding-top: 0px !important;
+      }
+    }
+    .padr-0 {
+      @include from ($tablet) {
+        padding-right: 0px !important;
+      }
+    }
+    .padl-0 {
+      @include from ($tablet) {
+        padding-left: 0px !important;
+      }
+    }
+    .padl-6 {
+      @include from ($tablet) {
+        padding-left: 3rem !important;
+      }
+    }
+    .padt-4 {
+      @include from ($tablet) {
+        padding-left: 1rem !important;
+      }
+    }
     padding-bottom: 52px;
     border-bottom: 1px solid #707070;
     margin-right: 7vw;

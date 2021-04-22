@@ -46,6 +46,8 @@ $multi-black: #333333; // sets variable dark-blue with code color
 $multi-black-invert: findColorInvert($multi-black); //finds the invert color
 $multi-footer: #17161a;
 $multi-footer-invert: findColorInvert($multi-footer);
+$multi-red: #FD4750;
+$multi-red-invert: findColorInvert($multi-red);
 
 @import "../node_modules/bulma/sass/utilities/derived-variables";
 $addColors: (
@@ -56,6 +58,10 @@ $addColors: (
   "multi-footer": (
     $multi-footer,
     $multi-footer-invert,
+  ),
+  "multi-red": (
+    $multi-red,
+    $multi-red-invert
   ),
   //adds variable dark-blue to addcolors List
 );

@@ -21,10 +21,9 @@
         <div>
           <div>
             <ul>
-              <li><router-link @click="close" to="/about">Nosotros</router-link></li>
-              <li><router-link @click="close" to="/about">Servicios</router-link></li>
-              <li><router-link @click="close" to="/about">Clientes</router-link></li>
-              <li><router-link @click="close" to="/about">Contacto</router-link></li>              
+              <li><router-link @click="close" to="/nosotros">Nosotros</router-link></li>
+              <li><router-link @click="close" to="/servicios">Servicios</router-link></li>
+              <li><router-link @click="close" to="/contacto">Contacto</router-link></li>
             </ul>
           </div>
         </div>
@@ -164,7 +163,7 @@ export default defineComponent({
 }
 
 .menu-wrap .menu > div {
-  background: rgba(24, 39, 51 , 0.85);
+  background: rgb(25 24 24);
   border-radius: 50%;
   width: 200vw;
   height: 250vw;
@@ -192,6 +191,7 @@ export default defineComponent({
 }
 
 .menu-wrap .menu > div > div > ul > li > a {
+  font-family: "Helvetica Bold";
   color: inherit;
   text-decoration: none;
   transition: color 0.4s ease;

@@ -9,12 +9,12 @@
       <div class="column has-text-left is-7 bordered-title">
         <h1 class="title bold-text">¿Tienes un proyecto?</h1>
       </div>
-      <div class="column has-text-right is-3 bordered-title">
+      <div class="column has-text-right-tablet is-3 bordered-title">
         <button class="button is-large contact-btn">Contáctanos</button>
       </div>
     </div>
     <div class="columns is-centered">
-      <div class="column has-text-left is-10">
+      <div class="column has-text-left-tablet is-10">
         <p class="subtitle">
           We’re a team of creatives who are excited about unique ideas and help
           digital and fin-tech companies to create amazing identity by crafting
@@ -36,6 +36,9 @@ export default defineComponent({
 <style lang="scss" scoped>
 .lets-talk-container {
   padding-bottom: 139px;
+  @include until($tablet) {
+    padding-bottom: 40px;
+  }
   h1.title {
     font-size: 50px;
     @include until($tablet) {
@@ -54,18 +57,27 @@ export default defineComponent({
   p.subtitle {
     padding-top: 10px;
     font-size: 23px;
+    max-width: 65%;
     @include until($tablet) {
       font-size: 15px;
       text-align: center;
+      max-width: 100%;
     }
   }
   .bordered-title {
     border-bottom: 1px solid #707070;
     padding-bottom: 50px;
+    @include until($tablet) {
+      padding-bottom: 12px;
+    }
   }
   .contact-btn {
     border: 1px solid #707070;
-    font-family: "Helvetica Bold"
+    font-family: "Helvetica Bold";
+    @include until($tablet) {
+      font-size: 0.9rem;
+    }
+
   }
 }
 </style>
