@@ -55,9 +55,8 @@ export default defineComponent({
       this.frame = '';
     },
     beforeOpen() {
-      this.frame = `<iframe allow="autoplay;" allowfullscreen frameborder="0" height="315"
-          src="https://www.youtube.com/embed/yJVc3DMOqhE?autoplay=1"
-          width="560" />`;
+      this.frame = `<iframe allow="autoplay;" allowfullscreen frameborder="0" 
+          src="https://www.youtube.com/embed/yJVc3DMOqhE?autoplay=1" style="width:50vw;height:80vh"/>`;
     },
   }
 });
@@ -105,10 +104,9 @@ export default defineComponent({
   flex-direction: column;
   margin: 0 1rem;
   padding: 1rem;
-  /*border: 1px solid #e2e8f0;*/
   border-radius: 0.25rem;
-  /*background: #fff;*/
   align-items: center;
+  width: 70% !important;
 }
 .modal__title {
   font-size: 1.5rem;
