@@ -1,7 +1,31 @@
 <template>
   <div class="gallery-main">
     <div class="gallery-img">
-      <div v-html="gallery[index].img"></div>
+      <div>
+        <img
+          v-if="index == 0"
+          src="../assets/images/gallery/cortez_gallery.png"
+          alt="cortez"
+        />
+        <img
+          v-if="index == 1"
+          src="../assets/images/gallery/toyota_gallery.png"
+          alt="cortez"
+        />
+        <img
+          v-if="index == 2"
+          src="../assets/images/gallery/pizza_hut_gallery.png"
+          alt="cortez"
+        />
+        <img
+          v-if="index == 3"
+          src="../assets/images/gallery/panel_entel_gallery.png"
+          alt="cortez"
+        />
+        <p class="client-info bold-text">
+          Cliente: {{ gallery[index].client }}
+        </p>
+      </div>
     </div>
     <i class="pointer arrow left" @click="prevPhoto"></i>
     <i class="pointer arrow right" @click="nextPhoto"></i>
@@ -26,10 +50,18 @@ export default defineComponent({
     return {
       index: this.test,
       gallery: [
-        { img: `<img src="src/assets/images/cortez.png" />` },
-        { img: `<img src="src/assets/images/toyota.png" />` },
-        { img: `<img src="src/assets/images/pizza_hut.png" />` },
-        { img: `<img src="src/assets/images/panel-entel.png" />` },
+        {
+          client: "Cortez",
+        },
+        {
+          client: "Toyota",
+        },
+        {
+          client: "Pizza Hut",
+        },
+        {
+          client: "Entel",
+        },
       ],
     };
   },
@@ -39,27 +71,37 @@ export default defineComponent({
 <style lang="scss" scoped>
 .gallery-main {
   position: relative;
-  padding: 4vw;
+  padding: 0 4vw;
+  width: 100%;
   .gallery-img {
-    padding: 2vw;
-    background: white;
+    padding: 0 2vw;
+    .client-info {
+      color: white;
+      font-size: 36px;
+    }
+    div {
+      ::v-deep img {
+        max-height: 85vh;
+        max-width: 70%;
+        border-radius: 5px;
+      }
+    }
   }
   .arrow {
-    border: solid white;
-    border-width: 0 7px 7px 0;
     position: absolute;
     display: inline-block;
-    padding: 20px;
     top: 50%;
     &.left {
       left: 0;
-      transform: rotate(135deg);
-      -webkit-transform: rotate(135deg);
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-right: 34px solid #ffffff79;
     }
     &.right {
       right: 0;
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-left: 34px solid #ffffff79;
     }
   }
 }

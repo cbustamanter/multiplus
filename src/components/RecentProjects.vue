@@ -63,7 +63,20 @@
     v-model="showModal"
     classes="modal-container"
     content-class="modal-content"
+    :esc-to-close="true"
   >
+    <button class="modal__close pointer" @click="showModal = false">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+      >
+        <path
+          d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+        />
+      </svg>
+    </button>
     <projects-gallery :test="galleryIndex" />
   </vue-final-modal>
 </template>
@@ -136,14 +149,36 @@ h1.title {
 ::v-deep .modal-content {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem;
   padding: 1rem;
   border-radius: 0.25rem;
   align-items: center;
-  width: auto !important;
+  justify-content: center;
+  max-height: unset !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #00000074;
 }
 .modal__title {
   font-size: 1.5rem;
   font-weight: 700;
+}
+.modal__close {
+  z-index: 9999;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  background: transparent;
+  border: unset;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: unset;
+    border: unset;
+  }
+  ::v-deep svg {
+    fill: #FFFFFF79;
+    width: 50px;
+    height: 50px;
+  }
 }
 </style>

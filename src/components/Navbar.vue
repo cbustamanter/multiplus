@@ -48,7 +48,7 @@ export default defineComponent({
 <style scoped>
 /* MENU STYLES */
 .menu-wrap {
-  position: fixed;
+  position: absolute;
   top: 70px;
   right: 110px;
   z-index: 1;

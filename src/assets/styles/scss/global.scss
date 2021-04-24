@@ -2,6 +2,11 @@
     display: flex !important;
     justify-content: center !important;
 }
+.full-centered {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+}
 .pointer {
     cursor: pointer;
 }
